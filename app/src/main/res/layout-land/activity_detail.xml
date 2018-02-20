@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape layout changed from portrait layout. Image moved to the left side and all text over
+to the right. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.dragonnedevelopment.sandwichclub.DetailActivity">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="@dimen/land_image_dimens"
+        android:layout_height="@dimen/land_image_dimens"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sandwich_picture_content_description"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/description_header"
+                style="@style/DetailHeaderTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_description_label" />
+
+            <TextView
+                android:id="@+id/description_tv"
+                style="@style/DetailTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder_text_description" />
+
+            <TextView
+                android:id="@+id/ingredients_header"
+                style="@style/DetailHeaderTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_ingredients_label" />
+
+            <TextView
+                android:id="@+id/ingredients_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailTextTheme"
+                tools:text="@string/placeholder_text_ingredients"
+                android:paddingBottom="@dimen/ingredients_bottom_padding"/>
+
+            <TextView
+                android:id="@+id/aka_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_also_known_as_label"
+                style="@style/DetailHeaderTheme"
+                android:paddingTop="@dimen/aka_top_padding"/>
+
+            <TextView
+                android:id="@+id/also_known_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailTextTheme"
+                tools:text="@string/placeholder_text_aka"/>
+
+            <TextView
+                android:id="@+id/place_of_origin_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_place_of_origin_label"
+                style="@style/DetailHeaderTheme"/>
+
+            <TextView
+                android:id="@+id/origin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailTextTheme"
+                tools:text="@string/placeholder_text_origin"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
